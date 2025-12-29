@@ -30,6 +30,9 @@ class InitCommand extends Command
         // Create component directory
         $this->createComponentDirectory();
 
+        // Update CSS with theme variables
+        $this->updateAppCss();
+
         // Show success message and next steps
         $this->displaySuccess();
 
@@ -59,6 +62,50 @@ class InitCommand extends Command
         } else {
             $this->line('✓ Directory already exists: '.$componentPath);
         }
+    }
+
+    protected function updateAppCss(): void
+    {
+        $this->info('Updating app.css with theme variables...');
+
+        $appCssPath = resource_path('css/app.css');
+
+        if (! File::exists($appCssPath)) {
+            $this->warn('app.css not found, skipping CSS update.');
+            $this->line('Please manually add theme variables to your CSS file.');
+
+            return;
+        }
+
+        $currentContent = File::get($appCssPath);
+
+        // Check if shadcn theme is already added
+        if (str_contains($currentContent, 'shadcn-blade theme')) {
+            $this->line('✓ Theme variables already present in app.css');
+
+            return;
+        }
+
+        // Get the theme stub
+        $themeStub = File::get(__DIR__.'/../../resources/stubs/theme.css.stub');
+
+        // Check if using Tailwind v4 (@theme syntax)
+        if (str_contains($currentContent, '@theme')) {
+            // Insert theme variables inside existing @theme block
+            $updatedContent = preg_replace(
+                '/(@theme\s*{[^}]*)(})/s',
+                '$1'.$themeStub.'$2',
+                $currentContent,
+                1
+            );
+        } else {
+            // Tailwind v3 or older - append at the end
+            $updatedContent = $currentContent."\n\n".$themeStub;
+        }
+
+        File::put($appCssPath, $updatedContent);
+
+        $this->line('✓ Added theme variables to app.css');
     }
 
     protected function displaySuccess(): void
