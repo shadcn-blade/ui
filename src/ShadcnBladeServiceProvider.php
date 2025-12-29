@@ -25,5 +25,4 @@ class ShadcnBladeServiceProvider extends PackageServiceProvider
                 AddCommand::class,
             ]);
     }
-
 }

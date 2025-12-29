@@ -99,7 +99,6 @@ class RegistryService
      * Check if component exists in registry
      *
      * @param  string  $name  Component name
-     * @return bool
      */
     public function has(string $name): bool
     {
