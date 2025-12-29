@@ -2,6 +2,8 @@
 
 namespace ShadcnBlade\UI;
 
+use ShadcnBlade\UI\Commands\AddCommand;
+use ShadcnBlade\UI\Commands\InitCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,6 +19,11 @@ class ShadcnBladeServiceProvider extends PackageServiceProvider
         $package
             ->name('shadcn-blade')
             ->hasConfigFile()
-            ->hasViews();
+            ->hasViews()
+            ->hasCommands([
+                InitCommand::class,
+                AddCommand::class,
+            ]);
     }
+
 }
