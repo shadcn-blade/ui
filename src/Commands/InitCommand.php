@@ -66,63 +66,72 @@ class InitCommand extends Command
 
     protected function updateAppCss(): void
     {
-        $this->info('Updating app.css with theme variables...');
+        $this->info('Setting up app.css with Tailwind v4 theme...');
 
         $appCssPath = resource_path('css/app.css');
 
+        // Get the complete app.css stub (Tailwind v4 with @import)
+        $appCssStub = File::get(__DIR__.'/../../resources/stubs/app.css.stub');
+
         if (! File::exists($appCssPath)) {
-            $this->warn('app.css not found, skipping CSS update.');
-            $this->line('Please manually add theme variables to your CSS file.');
+            // Create new app.css from stub
+            $cssDir = resource_path('css');
+            if (! File::isDirectory($cssDir)) {
+                File::makeDirectory($cssDir, 0755, true);
+            }
+            File::put($appCssPath, $appCssStub);
+            $this->line('✓ Created app.css with shadcn-blade theme (Tailwind v4)');
 
             return;
         }
 
         $currentContent = File::get($appCssPath);
 
-        // Check if shadcn theme is already added
-        if (str_contains($currentContent, 'shadcn-blade theme')) {
+        // Check if shadcn theme is already configured
+        if (str_contains($currentContent, '@theme inline') || str_contains($currentContent, '--color-primary')) {
             $this->line('✓ Theme variables already present in app.css');
 
             return;
         }
 
-        // Get the theme stub
-        $themeStub = File::get(__DIR__.'/../../resources/stubs/theme.css.stub');
+        // Check if using Tailwind v4 (@import "tailwindcss")
+        if (str_contains($currentContent, '@import "tailwindcss"')) {
+            $this->warn('Tailwind v4 detected but shadcn theme not configured.');
+            $this->line('Please manually merge the theme variables, or backup your app.css and re-run with --force');
 
-        // Check if using Tailwind v4 (@theme syntax)
-        if (str_contains($currentContent, '@theme')) {
-            // Insert theme variables inside existing @theme block
-            $updatedContent = preg_replace(
-                '/(@theme\s*{[^}]*)(})/s',
-                '$1'.$themeStub.'$2',
-                $currentContent,
-                1
-            );
-        } else {
-            // Tailwind v3 or older - append at the end
-            $updatedContent = $currentContent."\n\n".$themeStub;
+            return;
         }
 
-        File::put($appCssPath, $updatedContent);
-
-        $this->line('✓ Added theme variables to app.css');
+        // Offer to replace with Tailwind v4 setup
+        if ($this->confirm('Replace app.css with Tailwind v4 + shadcn-blade theme?', true)) {
+            File::put($appCssPath, $appCssStub);
+            $this->line('✓ Replaced app.css with Tailwind v4 theme');
+        } else {
+            $this->warn('Skipped CSS update. Please manually add theme variables.');
+        }
     }
 
     protected function displaySuccess(): void
     {
         $this->newLine();
-        $this->info('✨ Success! shadcn-blade/ui initialized.');
+        $this->info('✨ Success! shadcn-blade/ui initialized with Tailwind v4.');
         $this->newLine();
 
         $this->comment('Next steps:');
-        $this->line('1. Install Tailwind CSS and Alpine.js:');
-        $this->line('   npm install -D tailwindcss alpinejs');
+        $this->line('1. Install Tailwind CSS v4 and Alpine.js:');
+        $this->line('   npm install -D tailwindcss@next @tailwindcss/vite@next alpinejs');
         $this->newLine();
-        $this->line('2. Add components:');
-        $this->line('   php artisan shadcn:add button card');
+        $this->line('2. Update vite.config.js to add Tailwind plugin:');
+        $this->line('   import tailwindcss from \'@tailwindcss/vite\'');
+        $this->line('   export default { plugins: [tailwindcss()] }');
         $this->newLine();
-        $this->line('3. Start using components:');
+        $this->line('3. Add components:');
+        $this->line('   php artisan shadcn:add button');
+        $this->newLine();
+        $this->line('4. Start using components:');
         $this->line('   <x-ui.button>Click me</x-ui.button>');
+        $this->newLine();
+        $this->line('5. For dark mode, add class="dark" to <html> tag');
         $this->newLine();
     }
 }
