@@ -60,6 +60,7 @@
         "format": "vendor/bin/pint",
         "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
         "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "sync": "cp -v registry/ui/*.blade.php workbench/resources/views/components/ui/ 2>/dev/null || echo 'No components to sync'",
         "lint": [
             "@php vendor/bin/pint --ansi",
             "@php vendor/bin/phpstan analyse --verbose --ansi"
