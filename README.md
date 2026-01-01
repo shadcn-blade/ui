@@ -58,6 +58,7 @@ php artisan vendor:publish --tag="shadcn-blade-config"
 ### Component Status
 
 | Component       | Status       |
+|-----------------|--------------|
 | Accordion       | ⏳            |
 | Alert Dialog    | ⏳            |
 | Alert           | ⏳            |
