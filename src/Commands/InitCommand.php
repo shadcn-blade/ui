@@ -116,7 +116,7 @@ class InitCommand extends Command
         if (File::exists($appCssPath)) {
             if ($this->option('force') || $this->confirm("Update app.css with {$this->baseColor} theme?", true)) {
                 File::put($appCssPath, $appCssContent);
-                $this->line("✓ Updated app.css");
+                $this->line('✓ Updated app.css');
             }
         } else {
             // Create new app.css
@@ -125,7 +125,7 @@ class InitCommand extends Command
                 File::makeDirectory($cssDir, 0755, true);
             }
             File::put($appCssPath, $appCssContent);
-            $this->line("✓ Created app.css");
+            $this->line('✓ Created app.css');
         }
     }
 
