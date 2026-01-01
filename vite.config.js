@@ -17,6 +17,13 @@ export default defineConfig({
         hmr: {
             host: 'localhost',
         },
+        watch: {
+            ignored: [
+                '**/vendor/**',
+                '**/node_modules/**',
+                '**/storage/**',
+            ],
+        },
     },
     build: {
         outDir: 'public/build',
