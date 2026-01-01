@@ -1,0 +1,17 @@
+{
+  "name": "badge",
+  "type": "component",
+  "description": "Displays a badge or a component that looks like a badge.",
+  "files": [
+    {
+      "path": "badge.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["ui"],
+    "alpineRequired": false
+  }
+}

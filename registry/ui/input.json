@@ -1,0 +1,17 @@
+{
+  "name": "input",
+  "type": "component",
+  "description": "Displays a form input field or a component that looks like an input field.",
+  "files": [
+    {
+      "path": "input.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["forms"],
+    "alpineRequired": false
+  }
+}

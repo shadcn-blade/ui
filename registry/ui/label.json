@@ -1,0 +1,17 @@
+{
+  "name": "label",
+  "type": "component",
+  "description": "Renders an accessible label associated with controls.",
+  "files": [
+    {
+      "path": "label.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["forms"],
+    "alpineRequired": false
+  }
+}
