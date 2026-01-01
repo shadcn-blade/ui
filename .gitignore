@@ -4,6 +4,7 @@ composer.lock
 
 # Frontend Assets
 /node_modules
+package-lock.json
 
 # Logs
 npm-debug.log
@@ -35,3 +36,11 @@ ROADMAP.md
 # Claude Code
 .claude/
 CLAUDE.md
+
+# Workbench generated files
+workbench/storage/
+workbench/public/
+workbench/resources/views/components/ui/
+workbench/database/
+workbench/bootstrap/
+workbench/app/*

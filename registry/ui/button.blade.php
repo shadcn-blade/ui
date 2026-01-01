@@ -6,6 +6,7 @@
 @php
 use ShadcnBlade\UI\Utils\ClassComposer;
 
+// 100% identical to shadcn-vue buttonVariants
 $variants = [
     'variant' => [
         'default' => 'bg-primary text-primary-foreground hover:bg-primary/90',

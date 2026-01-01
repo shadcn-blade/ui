@@ -114,24 +114,15 @@ class InitCommand extends Command
     protected function displaySuccess(): void
     {
         $this->newLine();
-        $this->info('✨ Success! shadcn-blade/ui initialized with Tailwind v4.');
+        $this->info('Success! shadcn-blade/ui has been initialized.');
         $this->newLine();
 
         $this->comment('Next steps:');
-        $this->line('1. Install Tailwind CSS v4 and Alpine.js:');
-        $this->line('   npm install -D tailwindcss@next @tailwindcss/vite@next alpinejs');
-        $this->newLine();
-        $this->line('2. Update vite.config.js to add Tailwind plugin:');
-        $this->line('   import tailwindcss from \'@tailwindcss/vite\'');
-        $this->line('   export default { plugins: [tailwindcss()] }');
-        $this->newLine();
-        $this->line('3. Add components:');
+        $this->line('1. Add components:');
         $this->line('   php artisan shadcn:add button');
         $this->newLine();
-        $this->line('4. Start using components:');
+        $this->line('2. Start using components:');
         $this->line('   <x-ui.button>Click me</x-ui.button>');
-        $this->newLine();
-        $this->line('5. For dark mode, add class="dark" to <html> tag');
         $this->newLine();
     }
 }
