@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shadcn-blade Components</title>
     @vite(['workbench/resources/css/app.css'])
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="min-h-screen p-8">
     <div class="max-w-6xl mx-auto space-y-16">
@@ -245,15 +246,15 @@
                 <p class="text-sm font-semibold">Default</p>
                 <x-ui.radio-group>
                     <div class="flex items-center gap-3">
-                        <x-ui.radio-group-item id="r1" value="default" />
+                        <x-ui.radio-group-item id="r1" name="size" value="default" />
                         <x-ui.label for="r1">Default</x-ui.label>
                     </div>
                     <div class="flex items-center gap-3">
-                        <x-ui.radio-group-item id="r2" value="comfortable" :checked="true" />
+                        <x-ui.radio-group-item id="r2" name="size" value="comfortable" :checked="true" />
                         <x-ui.label for="r2">Comfortable</x-ui.label>
                     </div>
                     <div class="flex items-center gap-3">
-                        <x-ui.radio-group-item id="r3" value="compact" />
+                        <x-ui.radio-group-item id="r3" name="size" value="compact" />
                         <x-ui.label for="r3">Compact</x-ui.label>
                     </div>
                 </x-ui.radio-group>

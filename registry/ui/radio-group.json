@@ -1,0 +1,21 @@
+{
+  "name": "radio-group",
+  "type": "component",
+  "description": "A set of checkable buttons where only one can be checked at a time.",
+  "files": [
+    {
+      "path": "radio-group.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "radio-group-item.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["forms"],
+    "alpineRequired": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "switch",
+  "type": "component",
+  "description": "A toggle switch that can be checked or unchecked.",
+  "files": [
+    {
+      "path": "switch.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["forms"],
+    "alpineRequired": true
+  }
+}

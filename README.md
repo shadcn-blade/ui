@@ -18,34 +18,58 @@ The components are:
 
 ## Installation
 
-You can install the package via composer:
+Install the package via composer:
 
 ```bash
 composer require shadcn-blade/ui
 ```
 
-Ensure you have Tailwind CSS installed and configured in your Laravel project.
+Initialize shadcn-blade in your project:
+
+```bash
+php artisan shadcn:init
+```
+
+This will:
+- Create a `components.json` configuration file
+- Set up Tailwind v4 with theme variables
+- Allow you to choose a base color scheme (neutral, zinc, slate, stone, gray)
+- Create the component directory structure
 
 ## Usage
 
-After installation, you can start using the components in your Blade views. Each component is designed to be copy-paste friendly and fully customizable.
+Add components to your project:
+
+```bash
+# Add individual components
+php artisan shadcn:add button
+php artisan shadcn:add input
+
+# Components are copied to resources/views/components/ui/
+# You own the code and can customize freely
+```
+
+Use components in your Blade views:
 
 ```blade
-<x-shadcn-button variant="default">
-    Click me
-</x-shadcn-button>
+<x-ui.button variant="default">Click me</x-ui.button>
+<x-ui.input type="email" placeholder="Email" />
+<x-ui.badge variant="destructive">New</x-ui.badge>
 ```
 
-You can publish the views to customize them:
+### Color Schemes
+
+Choose from 5 base color schemes during initialization:
+- **neutral** - Pure grayscale
+- **zinc** - Neutral with minimal saturation
+- **slate** - Cool blue-gray tones
+- **stone** - Warm gray with brown undertones
+- **gray** - Balanced neutral gray
+
+To change the color scheme later:
 
 ```bash
-php artisan vendor:publish --tag="shadcn-blade-views"
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="shadcn-blade-config"
+php artisan shadcn:init --force
 ```
 
 ## Components
@@ -72,7 +96,7 @@ php artisan vendor:publish --tag="shadcn-blade-config"
 | Card            | ⏳            |
 | Carousel        | ⏳            |
 | Chart           | ⏳            |
-| Checkbox        | ⏳            |
+| Checkbox        | ✅            |
 | Collapsible     | ⏳            |
 | Combobox        | ⏳            |
 | Command         | ⏳            |
@@ -98,7 +122,7 @@ php artisan vendor:publish --tag="shadcn-blade-config"
 | Pagination      | ⏳            |
 | Popover         | ⏳            |
 | Progress        | ⏳            |
-| Radio Group     | ⏳            |
+| Radio Group     | ✅            |
 | Resizable       | ⏳            |
 | Scroll Area     | ⏳            |
 | Select          | ⏳            |
@@ -109,7 +133,7 @@ php artisan vendor:publish --tag="shadcn-blade-config"
 | Slider          | ⏳            |
 | Sonner          | ⏳            |
 | Spinner         | ⏳            |
-| Switch          | ⏳            |
+| Switch          | ✅            |
 | Table           | ⏳            |
 | Tabs            | ⏳            |
 | Textarea        | ✅            |
@@ -119,7 +143,7 @@ php artisan vendor:publish --tag="shadcn-blade-config"
 | Tooltip         | ⏳            |
 | Typography      | ⏳            |
 
-> **Total: 58 components** (5 complete, 53 planned)
+> **Total: 58 components** (8 complete, 50 planned)
 
 ## Testing
 
