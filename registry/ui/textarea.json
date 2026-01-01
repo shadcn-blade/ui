@@ -1,0 +1,17 @@
+{
+  "name": "textarea",
+  "type": "component",
+  "description": "Renders an accessible textarea associated with controls.",
+  "files": [
+    {
+      "path": "textarea.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["forms"],
+    "alpineRequired": false
+  }
+}

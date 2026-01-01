@@ -112,14 +112,14 @@ php artisan vendor:publish --tag="shadcn-blade-config"
 | Switch          | ⏳            |
 | Table           | ⏳            |
 | Tabs            | ⏳            |
-| Textarea        | ⏳            |
+| Textarea        | ✅            |
 | Toast           | ⏳            |
 | Toggle          | ⏳            |
 | Toggle Group    | ⏳            |
 | Tooltip         | ⏳            |
 | Typography      | ⏳            |
 
-> **Total: 58 components** (4 complete, 54 planned)
+> **Total: 58 components** (5 complete, 53 planned)
 
 ## Testing
 

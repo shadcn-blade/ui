@@ -4,7 +4,11 @@
   "components": [
     "badge",
     "button",
+    "checkbox",
     "input",
-    "label"
+    "label",
+    "radio-group",
+    "switch",
+    "textarea"
   ]
 }
