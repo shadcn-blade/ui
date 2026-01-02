@@ -295,6 +295,123 @@
                 </div>
             </div>
         </section>
+
+        {{-- Separator Component --}}
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold">Separator</h2>
+                <p class="text-sm text-muted-foreground">Visually or semantically separates content.</p>
+            </div>
+
+            {{-- Horizontal --}}
+            <div class="space-y-2">
+                <p class="text-sm font-semibold">Horizontal</p>
+                <div>
+                    <div class="space-y-1">
+                        <h4 class="text-sm font-medium leading-none">Radix Primitives</h4>
+                        <p class="text-sm text-muted-foreground">An open-source UI component library.</p>
+                    </div>
+                    <x-ui.separator class="my-4" />
+                    <div class="flex h-5 items-center space-x-4 text-sm">
+                        <div>Blog</div>
+                        <x-ui.separator orientation="vertical" />
+                        <div>Docs</div>
+                        <x-ui.separator orientation="vertical" />
+                        <div>Source</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- Alert Component --}}
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold">Alert</h2>
+                <p class="text-sm text-muted-foreground">Displays a callout for user attention.</p>
+            </div>
+
+            {{-- Default --}}
+            <div class="space-y-2 max-w-2xl">
+                <p class="text-sm font-semibold">Default</p>
+                <x-ui.alert>
+                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                    </svg>
+                    <x-ui.alert-title>Heads up!</x-ui.alert-title>
+                    <x-ui.alert-description>
+                        You can add components to your app using the cli.
+                    </x-ui.alert-description>
+                </x-ui.alert>
+            </div>
+
+            {{-- Destructive --}}
+            <div class="space-y-2 max-w-2xl">
+                <p class="text-sm font-semibold">Destructive</p>
+                <x-ui.alert variant="destructive">
+                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                    </svg>
+                    <x-ui.alert-title>Error</x-ui.alert-title>
+                    <x-ui.alert-description>
+                        Your session has expired. Please log in again.
+                    </x-ui.alert-description>
+                </x-ui.alert>
+            </div>
+        </section>
+
+        {{-- Avatar Component --}}
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold">Avatar</h2>
+                <p class="text-sm text-muted-foreground">An image element with a fallback for representing the user.</p>
+            </div>
+
+            {{-- Default --}}
+            <div class="space-y-2">
+                <p class="text-sm font-semibold">Default</p>
+                <div class="flex items-center gap-4">
+                    <x-ui.avatar>
+                        <x-ui.avatar-image src="https://github.com/shadcn.png" />
+                        <x-ui.avatar-fallback>CN</x-ui.avatar-fallback>
+                    </x-ui.avatar>
+                    <x-ui.avatar>
+                        <x-ui.avatar-fallback>JD</x-ui.avatar-fallback>
+                    </x-ui.avatar>
+                </div>
+            </div>
+        </section>
+
+        {{-- Skeleton Component --}}
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold">Skeleton</h2>
+                <p class="text-sm text-muted-foreground">Use to show a placeholder while content is loading.</p>
+            </div>
+
+            {{-- Default --}}
+            <div class="space-y-2 max-w-sm">
+                <p class="text-sm font-semibold">Default</p>
+                <div class="flex items-center space-x-4">
+                    <x-ui.skeleton class="size-12 rounded-full" />
+                    <div class="space-y-2">
+                        <x-ui.skeleton class="h-4 w-[250px]" />
+                        <x-ui.skeleton class="h-4 w-[200px]" />
+                    </div>
+                </div>
+            </div>
+
+            {{-- Card --}}
+            <div class="space-y-2 max-w-sm">
+                <p class="text-sm font-semibold">Card</p>
+                <div class="flex flex-col space-y-3">
+                    <x-ui.skeleton class="h-[125px] w-[250px] rounded-xl" />
+                    <div class="space-y-2">
+                        <x-ui.skeleton class="h-4 w-[250px]" />
+                        <x-ui.skeleton class="h-4 w-[200px]" />
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>

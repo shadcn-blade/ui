@@ -2,12 +2,16 @@
   "$schema": "https://shadcn-blade.com/registry-schema.json",
   "version": "0.1.0",
   "components": [
+    "alert",
+    "avatar",
     "badge",
     "button",
     "checkbox",
     "input",
     "label",
     "radio-group",
+    "separator",
+    "skeleton",
     "switch",
     "textarea"
   ]

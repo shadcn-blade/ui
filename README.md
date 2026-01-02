@@ -85,9 +85,9 @@ php artisan shadcn:init --force
 |-----------------|--------------|
 | Accordion       | ⏳            |
 | Alert Dialog    | ⏳            |
-| Alert           | ⏳            |
+| Alert           | ✅            |
 | Aspect Ratio    | ⏳            |
-| Avatar          | ⏳            |
+| Avatar          | ✅            |
 | Badge           | ✅            |
 | Breadcrumb      | ⏳            |
 | Button          | ✅            |
@@ -126,10 +126,10 @@ php artisan shadcn:init --force
 | Resizable       | ⏳            |
 | Scroll Area     | ⏳            |
 | Select          | ⏳            |
-| Separator       | ⏳            |
+| Separator       | ✅            |
 | Sheet           | ⏳            |
 | Sidebar         | ⏳            |
-| Skeleton        | ⏳            |
+| Skeleton        | ✅            |
 | Slider          | ⏳            |
 | Sonner          | ⏳            |
 | Spinner         | ⏳            |
@@ -143,7 +143,7 @@ php artisan shadcn:init --force
 | Tooltip         | ⏳            |
 | Typography      | ⏳            |
 
-> **Total: 58 components** (8 complete, 50 planned)
+> **Total: 58 components** (12 complete, 46 planned)
 
 ## Testing
 

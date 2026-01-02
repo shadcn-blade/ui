@@ -1,0 +1,25 @@
+{
+  "name": "alert",
+  "type": "component",
+  "description": "Displays a callout for user attention.",
+  "files": [
+    {
+      "path": "alert.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "alert-title.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "alert-description.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["ui"],
+    "alpineRequired": false
+  }
+}

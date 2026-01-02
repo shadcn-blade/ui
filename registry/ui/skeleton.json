@@ -1,0 +1,17 @@
+{
+  "name": "skeleton",
+  "type": "component",
+  "description": "Use to show a placeholder while content is loading.",
+  "files": [
+    {
+      "path": "skeleton.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["ui"],
+    "alpineRequired": false
+  }
+}

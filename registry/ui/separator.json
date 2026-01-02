@@ -1,0 +1,17 @@
+{
+  "name": "separator",
+  "type": "component",
+  "description": "Visually or semantically separates content.",
+  "files": [
+    {
+      "path": "separator.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["layout"],
+    "alpineRequired": false
+  }
+}

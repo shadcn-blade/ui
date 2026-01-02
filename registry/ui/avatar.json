@@ -1,0 +1,25 @@
+{
+  "name": "avatar",
+  "type": "component",
+  "description": "An image element with a fallback for representing the user.",
+  "files": [
+    {
+      "path": "avatar.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "avatar-image.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "avatar-fallback.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["ui"],
+    "alpineRequired": false
+  }
+}
