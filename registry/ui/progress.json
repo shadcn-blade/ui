@@ -1,0 +1,17 @@
+{
+  "name": "progress",
+  "type": "component",
+  "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  "files": [
+    {
+      "path": "progress.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["ui"],
+    "alpineRequired": false
+  }
+}

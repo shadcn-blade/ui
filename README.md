@@ -86,7 +86,7 @@ php artisan shadcn:init --force
 | Accordion       | ⏳            |
 | Alert Dialog    | ⏳            |
 | Alert           | ✅            |
-| Aspect Ratio    | ⏳            |
+| Aspect Ratio    | ✅            |
 | Avatar          | ✅            |
 | Badge           | ✅            |
 | Breadcrumb      | ⏳            |
@@ -121,7 +121,7 @@ php artisan shadcn:init --force
 | Navigation Menu | ⏳            |
 | Pagination      | ⏳            |
 | Popover         | ⏳            |
-| Progress        | ⏳            |
+| Progress        | ✅            |
 | Radio Group     | ✅            |
 | Resizable       | ⏳            |
 | Scroll Area     | ⏳            |
@@ -143,7 +143,7 @@ php artisan shadcn:init --force
 | Tooltip         | ⏳            |
 | Typography      | ⏳            |
 
-> **Total: 58 components** (12 complete, 46 planned)
+> **Total: 58 components** (14 complete, 44 planned)
 
 ## Testing
 

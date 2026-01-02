@@ -412,6 +412,94 @@
                 </div>
             </div>
         </section>
+
+        {{-- Aspect Ratio Component --}}
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold">Aspect Ratio</h2>
+                <p class="text-sm text-muted-foreground">Displays content within a desired ratio.</p>
+            </div>
+
+            {{-- 16/9 (Default) --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">16/9 (Default)</p>
+                <x-ui.aspect-ratio ratio="16/9" class="bg-muted rounded-md overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
+                        alt="Photo by Drew Beamer"
+                        class="h-full w-full object-cover"
+                    />
+                </x-ui.aspect-ratio>
+            </div>
+
+            {{-- Square (1/1) --}}
+            <div class="space-y-2 max-w-xs">
+                <p class="text-sm font-semibold">Square (1/1)</p>
+                <x-ui.aspect-ratio ratio="1/1" class="bg-muted rounded-md overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
+                        alt="Photo by Drew Beamer"
+                        class="h-full w-full object-cover"
+                    />
+                </x-ui.aspect-ratio>
+            </div>
+
+            {{-- Portrait (9/16) --}}
+            <div class="space-y-2 max-w-[200px]">
+                <p class="text-sm font-semibold">Portrait (9/16)</p>
+                <x-ui.aspect-ratio ratio="9/16" class="bg-muted rounded-md overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
+                        alt="Photo by Drew Beamer"
+                        class="h-full w-full object-cover"
+                    />
+                </x-ui.aspect-ratio>
+            </div>
+        </section>
+
+        {{-- Progress Component --}}
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold">Progress</h2>
+                <p class="text-sm text-muted-foreground">Displays an indicator showing the completion progress of a task.</p>
+            </div>
+
+            {{-- Default (0%) --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">Default (0%)</p>
+                <x-ui.progress :value="0" />
+            </div>
+
+            {{-- 25% --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">25%</p>
+                <x-ui.progress :value="25" />
+            </div>
+
+            {{-- 50% --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">50%</p>
+                <x-ui.progress :value="50" />
+            </div>
+
+            {{-- 75% --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">75%</p>
+                <x-ui.progress :value="75" />
+            </div>
+
+            {{-- 100% (Complete) --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">100% (Complete)</p>
+                <x-ui.progress :value="100" />
+            </div>
+
+            {{-- Custom max value --}}
+            <div class="space-y-2 max-w-md">
+                <p class="text-sm font-semibold">Custom max (60 of 200)</p>
+                <x-ui.progress :value="60" :max="200" />
+            </div>
+        </section>
     </div>
 </body>
 </html>

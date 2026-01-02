@@ -1,0 +1,17 @@
+{
+  "name": "aspect-ratio",
+  "type": "component",
+  "description": "Displays content within a desired ratio.",
+  "files": [
+    {
+      "path": "aspect-ratio.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["layout"],
+    "alpineRequired": false
+  }
+}
