@@ -89,7 +89,7 @@ php artisan shadcn:init --force
 | Aspect Ratio    | ✅      |
 | Avatar          | ✅      |
 | Badge           | ✅      |
-| Breadcrumb      | ⏳      |
+| Breadcrumb      | ✅      |
 | Button          | ✅      |
 | Button Group    | ⏳      |
 | Calendar        | ⏳      |
@@ -143,7 +143,7 @@ php artisan shadcn:init --force
 | Tooltip         | ⏳      |
 | Typography      | ⏳      |
 
-> **Total: 58 components** (15 complete, 43 planned)
+> **Total: 58 components** (16 complete, 42 planned)
 
 ## Testing
 
