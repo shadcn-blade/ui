@@ -1,0 +1,17 @@
+{
+  "name": "toggle",
+  "type": "component",
+  "description": "A two-state button that can be either on or off.",
+  "files": [
+    {
+      "path": "toggle.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["ui"],
+    "alpineRequired": true
+  }
+}

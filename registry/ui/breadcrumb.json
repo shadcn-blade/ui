@@ -1,0 +1,41 @@
+{
+  "name": "breadcrumb",
+  "type": "component",
+  "description": "Displays the path to the current resource using a hierarchy of links.",
+  "files": [
+    {
+      "path": "breadcrumb.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "breadcrumb-list.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "breadcrumb-item.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "breadcrumb-link.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "breadcrumb-page.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "breadcrumb-separator.blade.php",
+      "type": "blade"
+    },
+    {
+      "path": "breadcrumb-ellipsis.blade.php",
+      "type": "blade"
+    }
+  ],
+  "registryDependencies": [],
+  "dependencies": [],
+  "meta": {
+    "categories": ["navigation"],
+    "alpineRequired": false
+  }
+}

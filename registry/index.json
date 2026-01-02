@@ -6,6 +6,7 @@
     "aspect-ratio",
     "avatar",
     "badge",
+    "breadcrumb",
     "button",
     "checkbox",
     "input",
@@ -15,6 +16,7 @@
     "separator",
     "skeleton",
     "switch",
-    "textarea"
+    "textarea",
+    "toggle"
   ]
 }
